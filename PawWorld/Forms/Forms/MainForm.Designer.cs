@@ -1,6 +1,6 @@
 ﻿namespace PawWorld
 {
-    partial class FormMain
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnMinimized = new Guna.UI2.WinForms.Guna2Button();
             this.btnFullScreen = new Guna.UI2.WinForms.Guna2Button();
             this.btnExit = new Guna.UI2.WinForms.Guna2Button();
             this.lbWelcome = new System.Windows.Forms.Label();
@@ -72,7 +71,6 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Controls.Add(this.btnMinimized);
             this.guna2Panel1.Controls.Add(this.btnFullScreen);
             this.guna2Panel1.Controls.Add(this.btnExit);
             this.guna2Panel1.Controls.Add(this.lbWelcome);
@@ -87,23 +85,6 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1470, 78);
             this.guna2Panel1.TabIndex = 4;
-            // 
-            // btnMinimized
-            // 
-            this.btnMinimized.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimized.Animated = true;
-            this.btnMinimized.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnMinimized.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnMinimized.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnMinimized.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMinimized.FillColor = System.Drawing.Color.Silver;
-            this.btnMinimized.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnMinimized.ForeColor = System.Drawing.Color.White;
-            this.btnMinimized.Location = new System.Drawing.Point(1301, 9);
-            this.btnMinimized.Name = "btnMinimized";
-            this.btnMinimized.Size = new System.Drawing.Size(50, 30);
-            this.btnMinimized.TabIndex = 6;
-            this.btnMinimized.Click += new System.EventHandler(this.btnMinimized_Click);
             // 
             // btnFullScreen
             // 
@@ -133,6 +114,7 @@
             this.btnExit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnExit.ForeColor = System.Drawing.Color.White;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.Location = new System.Drawing.Point(1413, 9);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(50, 30);
@@ -482,7 +464,7 @@
             this.guna2Panel8.Size = new System.Drawing.Size(1200, 69);
             this.guna2Panel8.TabIndex = 8;
             // 
-            // FormMain
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -496,7 +478,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "FormMain";
+            this.Name = "MainForm";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMain";
@@ -530,7 +512,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel5;
         private Guna.UI2.WinForms.Guna2Panel pnChild;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel8;
-        private Guna.UI2.WinForms.Guna2Button btnMinimized;
         private Guna.UI2.WinForms.Guna2Button btnFullScreen;
         private Guna.UI2.WinForms.Guna2Button btnExit;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;

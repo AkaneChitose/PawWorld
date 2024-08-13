@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace PawWorld
 {
-    public partial class FormMain : Form
+    public partial class MainForm : Form
     {
-        public FormMain()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -51,7 +51,7 @@ namespace PawWorld
             //lbTitle.Text = "CỬA HÀNG";
         }
 
-        #region
+        #region func
         private Form activeForm = null;
         public void openChildForm(Form childForm)
         {
@@ -68,7 +68,8 @@ namespace PawWorld
             pnChild.Tag= childForm;
             childForm.Show();
         }
-        #endregion
+        
+        #endregion func
 
         private void pnChild_Paint(object sender, PaintEventArgs e)
         {

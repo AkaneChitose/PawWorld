@@ -11,7 +11,7 @@ namespace PawWorld
 
         public string connection()
         {
-            con = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Final term\PawWorld\PawWorld\dbBackUp.mdf;Integrated Security=True";
+            con = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\Final term\PawWorld_BU\PawWorld\dbBackUp.mdf;Integrated Security=True;Connect Timeout=30";
             return con;
         }
     }

@@ -105,46 +105,46 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="dbConnect.cs" />
-    <Compile Include="Forms\CustomerForm.cs">
+    <Compile Include="Forms\Modules\CustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\CustomerForm.Designer.cs">
+    <Compile Include="Forms\Modules\CustomerForm.Designer.cs">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\FormMain.cs">
+    <Compile Include="Forms\Forms\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\FormMain.Designer.cs">
-      <DependentUpon>FormMain.cs</DependentUpon>
+    <Compile Include="Forms\Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\LoginForm.cs">
+    <Compile Include="Forms\Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\LoginForm.Designer.cs">
+    <Compile Include="Forms\Forms\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ProductForm.cs">
+    <Compile Include="Forms\Forms\ProductForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ProductForm.Designer.cs">
+    <Compile Include="Forms\Forms\ProductForm.Designer.cs">
       <DependentUpon>ProductForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ProductModule.cs">
+    <Compile Include="Forms\Modules\ProductModule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ProductModule.Designer.cs">
+    <Compile Include="Forms\Modules\ProductModule.Designer.cs">
       <DependentUpon>ProductModule.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\UserForm.cs">
+    <Compile Include="Forms\Forms\UserForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\UserForm.Designer.cs">
+    <Compile Include="Forms\Forms\UserForm.Designer.cs">
       <DependentUpon>UserForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\UserModule.cs">
+    <Compile Include="Forms\Modules\UserModule.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\UserModule.Designer.cs">
+    <Compile Include="Forms\Modules\UserModule.Designer.cs">
       <DependentUpon>UserModule.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -152,30 +152,30 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SplashScreen.cs">
+    <Compile Include="Forms\SplashScreen\SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\SplashScreen.Designer.cs">
+    <Compile Include="Forms\SplashScreen\SplashScreen.Designer.cs">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\FormMain.resx">
-      <DependentUpon>FormMain.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\LoginForm.resx">
+    <EmbeddedResource Include="Forms\Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ProductForm.resx">
+    <EmbeddedResource Include="Forms\Forms\ProductForm.resx">
       <DependentUpon>ProductForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ProductModule.resx">
+    <EmbeddedResource Include="Forms\Modules\ProductModule.resx">
       <DependentUpon>ProductModule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UserForm.resx">
+    <EmbeddedResource Include="Forms\Forms\UserForm.resx">
       <DependentUpon>UserForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\UserModule.resx">
+    <EmbeddedResource Include="Forms\Modules\UserModule.resx">
       <DependentUpon>UserModule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -183,7 +183,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SplashScreen.resx">
+    <EmbeddedResource Include="Forms\SplashScreen\SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
@@ -220,13 +220,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>dbBackUp.mdf</DependentUpon>
     </Content>
-    <Content Include="dbPawWorld.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="dbPawWorld_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>dbPawWorld.mdf</DependentUpon>
-    </Content>
     <Content Include="Resources\BG\pexels-cong-h-613161-1404819.jpg" />
     <Content Include="Resources\BG\Pink Cute Illustration Pet Grooming Services Presentation.png" />
     <Content Include="Resources\Icon\add-user.png" />
@@ -244,6 +237,7 @@
     <Content Include="Resources\Icon\logout-white.png" />
     <Content Include="Resources\Icon\Logout.png" />
     <Content Include="Resources\Icon\min-max-windows.png" />
+    <Content Include="Resources\Icon\normal-screen.png" />
     <Content Include="Resources\Illustrations\paw.png" />
     <Content Include="Resources\Icon\pet-care.png" />
     <Content Include="Resources\Icon\plus.jpg" />
@@ -251,12 +245,10 @@
     <Content Include="Resources\Icon\store.png" />
     <Content Include="Resources\Icon\User.png" />
     <Content Include="Resources\Illustrations\avatar.png" />
-    <Content Include="Resources\LOGO.ico" />
-    <Content Include="Resources\Paw World.ico" />
+    <Content Include="Resources\.ico\LOGO.ico" />
+    <Content Include="Resources\.ico\Paw World.ico" />
     <Content Include="Resources\Pet Shop Banner.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Forms\User\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

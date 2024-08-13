@@ -1,17 +1,6 @@
-﻿using Guna.UI2.WinForms;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Globalization;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace PawWorld.Forms
 {
@@ -36,62 +25,61 @@ namespace PawWorld.Forms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            using (SqlConnection cn = new SqlConnection(dbcon.connection()))
+            try
             {
-                try
+                CheckField();
+
+                if (check)
                 {
-                    CheckField();
+                    string newPcode = GenerateUniqueID();
+                    lbPcode.Text = newPcode;
 
-                    if (check)
+                    if (MessageBox.Show("Bạn thực sự muốn thêm sản phẩm này?", "Thêm sản phẩm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        string newPcode = lbPcode.Text; // Assuming the code is already set
-
-                        if (MessageBox.Show("Bạn thực sự muốn sửa sản phẩm này?", "Sửa sản phẩm", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        // Prepare the SQL command for insertion
+                        using (SqlCommand cm = new SqlCommand("INSERT INTO tbProduct (pcode, pname, ptype, pcategory, pqty, pprice) VALUES (@pcode, @pname, @ptype, @pcategory, @pqty, @pprice)", cn))
                         {
-                            // Prepare the SQL command
-                            using (SqlCommand cm = new SqlCommand("UPDATE tbProduct SET pname=@pname, ptype=@ptype, pcategory=@pcategory, pqty=@pqty, pprice=@pprice WHERE pcode=@pcode", cn))
+                            cm.Parameters.AddWithValue("@pcode", newPcode);
+                            cm.Parameters.AddWithValue("@pname", tbName.Text);
+                            cm.Parameters.AddWithValue("@ptype", cbCategory.Text);
+                            cm.Parameters.AddWithValue("@pcategory", tbType.Text);
+                            cm.Parameters.AddWithValue("@pqty", (int)nudQty.Value);
+
+                            // Parse and format the price correctly
+                            string priceText = tbPrice.Text.Replace(" VND", "").Replace(",", "").Trim();
+                            if (double.TryParse(priceText, out double price))
                             {
-                                cm.Parameters.AddWithValue("@pcode", newPcode);
-                                cm.Parameters.AddWithValue("@pname", tbName.Text);
-                                cm.Parameters.AddWithValue("@ptype", cbCategory.Text);
-                                cm.Parameters.AddWithValue("@pcategory", tbType.Text);
-                                cm.Parameters.AddWithValue("@pqty", (int)nudQty.Value);
+                                cm.Parameters.AddWithValue("@pprice", price);
+                            }
+                            else
+                            {
+                                MessageBox.Show("Giá không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                return;
+                            }
 
-                                // Parse and format the price correctly
-                                string priceText = tbPrice.Text.Replace(" VND", "").Replace(",", "").Trim();
-                                if (double.TryParse(priceText, out double price))
-                                {
-                                    cm.Parameters.AddWithValue("@pprice", price);
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Giá không hợp lệ!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                    return;
-                                }
+                            // Open connection and execute the command
+                            cn.Open();
+                            int rowsAffected = cm.ExecuteNonQuery();
+                            cn.Close();
 
-                                // Open connection and execute the command
-                                cn.Open();
-                                int rowsAffected = cm.ExecuteNonQuery();
-
-                                // Check if any rows were affected
-                                if (rowsAffected > 0)
-                                {
-                                    MessageBox.Show("Sửa thành công!", title);
-                                    product.LoadProduct();
-                                    this.Dispose();
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Không tìm thấy sản phẩm để cập nhật.", title);
-                                }
+                            // Check if any rows were affected
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("Thêm thành công!", title);
+                                product.LoadProduct();
+                                this.Dispose();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Không thể thêm sản phẩm.", title);
                             }
                         }
                     }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Lỗi: {ex.Message}", title);
-                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi: {ex.Message}", title);
             }
 
         }
@@ -100,6 +88,10 @@ namespace PawWorld.Forms
         {
             this.Dispose();
         }
+
+
+
+
         #region Method
 
 
@@ -121,20 +113,20 @@ namespace PawWorld.Forms
 
             do
             {
-                newPcode = rnd.Next(80000000, 89999999).ToString();
+                newPcode = rnd.Next(80000000, 99999999).ToString();
                 isUnique = CheckIDUnique(newPcode);
             } while (!isUnique);
 
             return newPcode;
         }
 
-        private bool CheckIDUnique(string id)
+        private bool CheckIDUnique(string pcode)
         {
             bool isUnique = false;
             try
             {
-                SqlCommand checkCmd = new SqlCommand("SELECT COUNT(*) FROM tbUser WHERE id = @id", cn);
-                checkCmd.Parameters.AddWithValue("@id", id);
+                SqlCommand checkCmd = new SqlCommand("SELECT COUNT(*) FROM tbProduct WHERE pcode = @pcode", cn);
+                checkCmd.Parameters.AddWithValue("@pcode", pcode);
                 cn.Open();
                 int count = (int)checkCmd.ExecuteScalar();
                 cn.Close();
@@ -223,7 +215,9 @@ namespace PawWorld.Forms
                         }
                     }
                 }
+                btnSave.Enabled = true;
             }
+            
             catch (Exception ex)
             {
                 cn.Close();

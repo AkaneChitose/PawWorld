@@ -41,15 +41,15 @@ namespace PawWorld.Forms
                 module.dtpDoB.Text = dgvUserInfo.Rows[e.RowIndex].Cells[6].Value.ToString();
                 module.tbPassword.Text = dgvUserInfo.Rows[e.RowIndex].Cells[7].Value.ToString();
 
-                module.btnSave.Enabled = false;
+                module.btnSave.Visible = false;
                 module.btnUpdate.Enabled = true;
                 module.ShowDialog();
             }
-            if (MessageBox.Show("Bạn có thực sự muốn xóa nhân viên này?", "Xóa nhân viên", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            else if (colName == "Delete")
             {
+                if(MessageBox.Show("Bạn có chắc chắn muốn xoá nhân viên này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 try
                 {
-                    // Using a parameterized query to prevent SQL injection
                     using (SqlCommand cm = new SqlCommand("DELETE FROM tbUser WHERE id = @id", cn))
                     {
                         cm.Parameters.AddWithValue("@id", dgvUserInfo.Rows[e.RowIndex].Cells[1].Value.ToString());
@@ -58,7 +58,7 @@ namespace PawWorld.Forms
                         int rowsAffected = cm.ExecuteNonQuery();
                         cn.Close();
 
-                        // Check if any row was actually deleted
+
                         if (rowsAffected > 0)
                         {
                             MessageBox.Show("Xóa nhân viên thành công!", title, MessageBoxButtons.OK, MessageBoxIcon.Information);
