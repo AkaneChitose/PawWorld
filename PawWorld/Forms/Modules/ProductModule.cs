@@ -14,6 +14,7 @@ namespace PawWorld.Forms
         bool check = false;
 
         ProductForm product;
+        private CustomerForm customerForm;
 
         public ProductModule(ProductForm form)
         {
@@ -21,6 +22,11 @@ namespace PawWorld.Forms
             cn = new SqlConnection(dbcon.connection());
             product = form;
             cbCategory.SelectedIndex = 0;
+        }
+
+        public ProductModule(CustomerForm customerForm)
+        {
+            this.customerForm = customerForm;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -41,7 +47,7 @@ namespace PawWorld.Forms
                         {
                             cm.Parameters.AddWithValue("@pcode", newPcode);
                             cm.Parameters.AddWithValue("@pname", tbName.Text);
-                            cm.Parameters.AddWithValue("@ptype", cbCategory.Text);
+                            cm.Parameters.AddWithValue("@ptype", cbCategory.Text);  
                             cm.Parameters.AddWithValue("@pcategory", tbType.Text);
                             cm.Parameters.AddWithValue("@pqty", (int)nudQty.Value);
 

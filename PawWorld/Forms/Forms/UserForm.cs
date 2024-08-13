@@ -24,7 +24,6 @@ namespace PawWorld.Forms
         {
             UserModule module = new UserModule(this);
             module.ShowDialog();                        // Show Diaglog Events
-
         }
 
         private void dgvUserInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)

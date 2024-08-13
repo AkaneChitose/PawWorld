@@ -241,6 +241,7 @@
             this.btnLogOut.TabIndex = 5;
             this.btnLogOut.Text = "Đăng xuất";
             this.btnLogOut.TextOffset = new System.Drawing.Point(14, 0);
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // guna2Button5
             // 
@@ -347,6 +348,7 @@
             this.btnCustomers.TabIndex = 1;
             this.btnCustomers.Text = "Khách hàng";
             this.btnCustomers.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnCustomers.Click += new System.EventHandler(this.btnCustomers_Click);
             // 
             // btnDashBoard
             // 
@@ -456,7 +458,7 @@
             // 
             // guna2Panel8
             // 
-            this.guna2Panel8.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.guna2Panel8.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.guna2Panel8.BorderRadius = 20;
             this.guna2Panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.guna2Panel8.Location = new System.Drawing.Point(270, 854);

@@ -74,6 +74,7 @@ namespace PawWorld.Forms
                         userForm.LoadUser();
                         this.Dispose();
                     }
+                    
                 }
             }
             catch (Exception ex)
@@ -118,6 +119,7 @@ namespace PawWorld.Forms
                         this.Dispose();
                     }
                 }
+                
             }
             catch (Exception ex)
             {

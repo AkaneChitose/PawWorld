@@ -80,5 +80,15 @@ namespace PawWorld
         {
             openChildForm(new UserForm());
         }
+
+        private void btnCustomers_Click(object sender, EventArgs e)
+        {
+            openChildForm(new CustomerForm());
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
