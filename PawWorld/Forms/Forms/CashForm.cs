@@ -72,13 +72,13 @@ namespace PawWorld.Forms.Forms
 
         private void bthCash_Click(object sender, EventArgs e)
         {
-            //CashCustomer customer = new CashCustomer(this);
-            //customer.ShowDialog();
+            CashCustomer customer = new CashCustomer(this);
+            customer.ShowDialog();
 
             if (MessageBox.Show("Are you sure you want to cash this product?", "Cashing", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 getTranso();
-                //main.loadDailySale();
+                main.loadDailySale(this);
                 for (int i = 0; i < dgvCash.Rows.Count; i++)
                 {
                     dbcon.executeQuery("UPDATE tbProduct SET pqty= pqty - " + int.Parse(dgvCash.Rows[i].Cells[4].Value.ToString()) + " WHERE pcode LIKE " + dgvCash.Rows[i].Cells[2].Value.ToString() + "");

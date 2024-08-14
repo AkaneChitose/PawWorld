@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -14,9 +15,17 @@ namespace PawWorld
 {
     public partial class MainForm : Form
     {
+        SqlConnection cn = new SqlConnection();
+        SqlCommand cm = new SqlCommand();
+        dbConnect dbcon = new dbConnect();
+        SqlDataReader dr;
+
+        string title = "Paw World 🐾";
         public MainForm()
         {
             InitializeComponent();
+            cn = new SqlConnection(dbcon.connection());
+            loadDailySale(this);
         }
 
         private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
@@ -69,6 +78,26 @@ namespace PawWorld
             pnChild.Tag= childForm;
             childForm.Show();
         }
+        public void loadDailySale(Form childForm)
+        {
+            string sdate = DateTime.Now.ToString("ddMMyyyy");
+
+            try
+            {
+                cn.Open();
+                cm = new SqlCommand("SELECT ISNULL(SUM(total), 0) AS total FROM tbCash WHERE transno LIKE '" +sdate + "%'", cn);
+                cm.Parameters.AddWithValue("@price", sdate);
+                lbTotalRecord.Text = double.Parse(cm.ExecuteReader().ToString()).ToString("#,##0.00");
+                
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                cn.Close();
+                MessageBox.Show(ex.Message, title);
+            }
+            //return data;
+        }
         
         #endregion func
 
@@ -97,6 +126,11 @@ namespace PawWorld
         private void btnCash_Click(object sender, EventArgs e)
         {
             openChildForm(new CashForm(this));
+        }
+
+        private void btnDashBoard_Click(object sender, EventArgs e)
+        {
+            openChildForm(new DashBoard());
         }
     }
 }

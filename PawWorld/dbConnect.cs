@@ -35,5 +35,10 @@ namespace PawWorld
             }
 
         }
+
+        internal void executeQuery(string v, SqlParameter sqlParameter1, SqlParameter sqlParameter2)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

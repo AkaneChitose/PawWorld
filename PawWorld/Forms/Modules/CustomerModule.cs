@@ -182,5 +182,10 @@ namespace PawWorld.Forms.Modules
             return isUnique;
         }
         #endregion
+
+        private void cbType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

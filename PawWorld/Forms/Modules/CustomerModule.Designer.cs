@@ -135,6 +135,7 @@
             this.cbType.StartIndex = 1;
             this.cbType.TabIndex = 59;
             this.cbType.TextOffset = new System.Drawing.Point(5, 0);
+            this.cbType.SelectedIndexChanged += new System.EventHandler(this.cbType_SelectedIndexChanged);
             // 
             // tbPetName
             // 

@@ -52,11 +52,21 @@
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pnChild = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.guna2Panel6 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lbTotalRecord = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            this.guna2GradientPanel1.SuspendLayout();
+            this.guna2GradientPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2Panel3
@@ -187,6 +197,7 @@
             // guna2Panel2
             // 
             this.guna2Panel2.BorderRadius = 50;
+            this.guna2Panel2.Controls.Add(this.guna2GradientPanel1);
             this.guna2Panel2.Controls.Add(this.guna2Panel5);
             this.guna2Panel2.Controls.Add(this.btnLogOut);
             this.guna2Panel2.Controls.Add(this.btnCash);
@@ -211,10 +222,10 @@
             // 
             this.guna2Panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.guna2Panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2Panel5.Location = new System.Drawing.Point(0, 556);
+            this.guna2Panel5.Location = new System.Drawing.Point(0, 506);
             this.guna2Panel5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Size = new System.Drawing.Size(12, 220);
+            this.guna2Panel5.Size = new System.Drawing.Size(12, 270);
             this.guna2Panel5.TabIndex = 7;
             // 
             // btnLogOut
@@ -260,11 +271,11 @@
             this.btnCash.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCash.ImageOffset = new System.Drawing.Point(30, 0);
             this.btnCash.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnCash.Location = new System.Drawing.Point(0, 491);
+            this.btnCash.Location = new System.Drawing.Point(0, 451);
             this.btnCash.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCash.Name = "btnCash";
             this.btnCash.PressedColor = System.Drawing.Color.DarkOrange;
-            this.btnCash.Size = new System.Drawing.Size(270, 65);
+            this.btnCash.Size = new System.Drawing.Size(270, 55);
             this.btnCash.TabIndex = 4;
             this.btnCash.Text = "Cash";
             this.btnCash.TextOffset = new System.Drawing.Point(10, 0);
@@ -287,11 +298,11 @@
             this.btnStore.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnStore.ImageOffset = new System.Drawing.Point(30, 0);
             this.btnStore.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnStore.Location = new System.Drawing.Point(0, 426);
+            this.btnStore.Location = new System.Drawing.Point(0, 396);
             this.btnStore.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnStore.Name = "btnStore";
             this.btnStore.PressedColor = System.Drawing.Color.DarkOrange;
-            this.btnStore.Size = new System.Drawing.Size(270, 65);
+            this.btnStore.Size = new System.Drawing.Size(270, 55);
             this.btnStore.TabIndex = 3;
             this.btnStore.Text = "Cửa Hàng";
             this.btnStore.TextOffset = new System.Drawing.Point(10, 0);
@@ -315,11 +326,11 @@
             this.btnUser.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnUser.ImageOffset = new System.Drawing.Point(30, 0);
             this.btnUser.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnUser.Location = new System.Drawing.Point(0, 361);
+            this.btnUser.Location = new System.Drawing.Point(0, 341);
             this.btnUser.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnUser.Name = "btnUser";
             this.btnUser.PressedColor = System.Drawing.Color.DarkOrange;
-            this.btnUser.Size = new System.Drawing.Size(270, 65);
+            this.btnUser.Size = new System.Drawing.Size(270, 55);
             this.btnUser.TabIndex = 2;
             this.btnUser.Text = "Nhân Viên";
             this.btnUser.TextOffset = new System.Drawing.Point(10, 0);
@@ -342,11 +353,11 @@
             this.btnCustomers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnCustomers.ImageOffset = new System.Drawing.Point(30, 0);
             this.btnCustomers.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnCustomers.Location = new System.Drawing.Point(0, 296);
+            this.btnCustomers.Location = new System.Drawing.Point(0, 286);
             this.btnCustomers.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnCustomers.Name = "btnCustomers";
             this.btnCustomers.PressedColor = System.Drawing.Color.DarkOrange;
-            this.btnCustomers.Size = new System.Drawing.Size(270, 65);
+            this.btnCustomers.Size = new System.Drawing.Size(270, 55);
             this.btnCustomers.TabIndex = 1;
             this.btnCustomers.Text = "Khách hàng";
             this.btnCustomers.TextOffset = new System.Drawing.Point(10, 0);
@@ -381,10 +392,11 @@
             this.btnDashBoard.ShadowDecoration.CustomizableEdges.TopRight = false;
             this.btnDashBoard.ShadowDecoration.Depth = 20;
             this.btnDashBoard.ShadowDecoration.Shadow = new System.Windows.Forms.Padding(0, 0, 100, 0);
-            this.btnDashBoard.Size = new System.Drawing.Size(270, 65);
+            this.btnDashBoard.Size = new System.Drawing.Size(270, 55);
             this.btnDashBoard.TabIndex = 0;
             this.btnDashBoard.Text = "Dashboard";
             this.btnDashBoard.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnDashBoard.Click += new System.EventHandler(this.btnDashBoard_Click);
             // 
             // guna2Panel4
             // 
@@ -468,6 +480,91 @@
             this.guna2Panel8.Size = new System.Drawing.Size(1200, 69);
             this.guna2Panel8.TabIndex = 8;
             // 
+            // guna2GradientPanel1
+            // 
+            this.guna2GradientPanel1.Controls.Add(this.guna2GradientPanel2);
+            this.guna2GradientPanel1.Controls.Add(this.label2);
+            this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.guna2GradientPanel1.Location = new System.Drawing.Point(12, 506);
+            this.guna2GradientPanel1.Name = "guna2GradientPanel1";
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(258, 270);
+            this.guna2GradientPanel1.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(4, 3);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(154, 23);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Báo cáo hằng ngày";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2GradientPanel2
+            // 
+            this.guna2GradientPanel2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.guna2GradientPanel2.Controls.Add(this.label6);
+            this.guna2GradientPanel2.Controls.Add(this.label5);
+            this.guna2GradientPanel2.Controls.Add(this.label4);
+            this.guna2GradientPanel2.Controls.Add(this.lbTotalRecord);
+            this.guna2GradientPanel2.Controls.Add(this.guna2Panel6);
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(9, 48);
+            this.guna2GradientPanel2.Name = "guna2GradientPanel2";
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(216, 103);
+            this.guna2GradientPanel2.TabIndex = 3;
+            // 
+            // guna2Panel6
+            // 
+            this.guna2Panel6.BackColor = System.Drawing.SystemColors.MenuHighlight;
+            this.guna2Panel6.Location = new System.Drawing.Point(13, 3);
+            this.guna2Panel6.Name = "guna2Panel6";
+            this.guna2Panel6.Size = new System.Drawing.Size(6, 97);
+            this.guna2Panel6.TabIndex = 0;
+            // 
+            // lbTotalRecord
+            // 
+            this.lbTotalRecord.AutoSize = true;
+            this.lbTotalRecord.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTotalRecord.Location = new System.Drawing.Point(141, 31);
+            this.lbTotalRecord.Name = "lbTotalRecord";
+            this.lbTotalRecord.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lbTotalRecord.Size = new System.Drawing.Size(17, 19);
+            this.lbTotalRecord.TabIndex = 1;
+            this.lbTotalRecord.Text = "0";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(161, 31);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(39, 19);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "VND";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(25, 3);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(72, 19);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Tổng tiền";
+            // 
+            // label6
+            // 
+            this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(24, 63);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(189, 37);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Record daily in inventory";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -493,6 +590,10 @@
             this.guna2Panel4.ResumeLayout(false);
             this.guna2Panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            this.guna2GradientPanel1.ResumeLayout(false);
+            this.guna2GradientPanel1.PerformLayout();
+            this.guna2GradientPanel2.ResumeLayout(false);
+            this.guna2GradientPanel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -522,5 +623,13 @@
         public System.Windows.Forms.Label lbCashierName;
         public System.Windows.Forms.Label lbRole;
         public Guna.UI2.WinForms.Guna2Button btnUser;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
+        private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
+        public System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbTotalRecord;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel6;
     }
 }

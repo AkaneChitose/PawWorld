@@ -141,9 +141,9 @@
             this.cbCategory.ForeColor = System.Drawing.Color.DimGray;
             this.cbCategory.ItemHeight = 38;
             this.cbCategory.Items.AddRange(new object[] {
-            "Chó",
-            "Mèo",
-            "Chim",
+            "Dog",
+            "Cat",
+            "Bird",
             "Hamster"});
             this.cbCategory.Location = new System.Drawing.Point(751, 189);
             this.cbCategory.Name = "cbCategory";
