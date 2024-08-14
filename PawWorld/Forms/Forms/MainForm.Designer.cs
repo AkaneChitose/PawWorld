@@ -41,14 +41,14 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel5 = new Guna.UI2.WinForms.Guna2Panel();
             this.btnLogOut = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCash = new Guna.UI2.WinForms.Guna2Button();
             this.btnStore = new Guna.UI2.WinForms.Guna2Button();
             this.btnUser = new Guna.UI2.WinForms.Guna2Button();
             this.btnCustomers = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashBoard = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel4 = new Guna.UI2.WinForms.Guna2Panel();
             this.lbRole = new System.Windows.Forms.Label();
-            this.lalbUserName = new System.Windows.Forms.Label();
+            this.lbCashierName = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.pnChild = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel8 = new Guna.UI2.WinForms.Guna2Panel();
@@ -189,7 +189,7 @@
             this.guna2Panel2.BorderRadius = 50;
             this.guna2Panel2.Controls.Add(this.guna2Panel5);
             this.guna2Panel2.Controls.Add(this.btnLogOut);
-            this.guna2Panel2.Controls.Add(this.guna2Button5);
+            this.guna2Panel2.Controls.Add(this.btnCash);
             this.guna2Panel2.Controls.Add(this.btnStore);
             this.guna2Panel2.Controls.Add(this.btnUser);
             this.guna2Panel2.Controls.Add(this.btnCustomers);
@@ -243,31 +243,32 @@
             this.btnLogOut.TextOffset = new System.Drawing.Point(14, 0);
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
-            // guna2Button5
+            // btnCash
             // 
-            this.guna2Button5.BorderRadius = 1;
-            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.guna2Button5.FillColor = System.Drawing.Color.White;
-            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button5.ForeColor = System.Drawing.Color.DimGray;
-            this.guna2Button5.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.guna2Button5.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.guna2Button5.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button5.Image")));
-            this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button5.ImageOffset = new System.Drawing.Point(30, 0);
-            this.guna2Button5.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button5.Location = new System.Drawing.Point(0, 491);
-            this.guna2Button5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.PressedColor = System.Drawing.Color.DarkOrange;
-            this.guna2Button5.Size = new System.Drawing.Size(270, 65);
-            this.guna2Button5.TabIndex = 4;
-            this.guna2Button5.Text = "Cash";
-            this.guna2Button5.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnCash.BorderRadius = 1;
+            this.btnCash.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCash.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCash.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCash.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCash.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCash.FillColor = System.Drawing.Color.White;
+            this.btnCash.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCash.ForeColor = System.Drawing.Color.DimGray;
+            this.btnCash.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnCash.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.btnCash.Image = ((System.Drawing.Image)(resources.GetObject("btnCash.Image")));
+            this.btnCash.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnCash.ImageOffset = new System.Drawing.Point(30, 0);
+            this.btnCash.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnCash.Location = new System.Drawing.Point(0, 491);
+            this.btnCash.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnCash.Name = "btnCash";
+            this.btnCash.PressedColor = System.Drawing.Color.DarkOrange;
+            this.btnCash.Size = new System.Drawing.Size(270, 65);
+            this.btnCash.TabIndex = 4;
+            this.btnCash.Text = "Cash";
+            this.btnCash.TextOffset = new System.Drawing.Point(10, 0);
+            this.btnCash.Click += new System.EventHandler(this.btnCash_Click);
             // 
             // btnStore
             // 
@@ -304,6 +305,7 @@
             this.btnUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnUser.Enabled = false;
             this.btnUser.FillColor = System.Drawing.Color.White;
             this.btnUser.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUser.ForeColor = System.Drawing.Color.DimGray;
@@ -319,7 +321,7 @@
             this.btnUser.PressedColor = System.Drawing.Color.DarkOrange;
             this.btnUser.Size = new System.Drawing.Size(270, 65);
             this.btnUser.TabIndex = 2;
-            this.btnUser.Text = "Tôi";
+            this.btnUser.Text = "Nhân Viên";
             this.btnUser.TextOffset = new System.Drawing.Point(10, 0);
             this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
@@ -390,7 +392,7 @@
             this.guna2Panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.guna2Panel4.BorderRadius = 50;
             this.guna2Panel4.Controls.Add(this.lbRole);
-            this.guna2Panel4.Controls.Add(this.lalbUserName);
+            this.guna2Panel4.Controls.Add(this.lbCashierName);
             this.guna2Panel4.Controls.Add(this.guna2CirclePictureBox1);
             this.guna2Panel4.CustomizableEdges.BottomLeft = false;
             this.guna2Panel4.CustomizableEdges.BottomRight = false;
@@ -408,26 +410,26 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbRole.AutoSize = true;
-            this.lbRole.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbRole.Location = new System.Drawing.Point(103, 186);
+            this.lbRole.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbRole.Location = new System.Drawing.Point(99, 186);
             this.lbRole.Name = "lbRole";
-            this.lbRole.Size = new System.Drawing.Size(62, 19);
+            this.lbRole.Size = new System.Drawing.Size(72, 23);
             this.lbRole.TabIndex = 1;
             this.lbRole.Text = "Chức vụ";
             // 
-            // lalbUserName
+            // lbCashierName
             // 
-            this.lalbUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.lbCashierName.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lalbUserName.AutoSize = true;
-            this.lalbUserName.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lalbUserName.Location = new System.Drawing.Point(70, 160);
-            this.lalbUserName.Name = "lalbUserName";
-            this.lalbUserName.Size = new System.Drawing.Size(132, 26);
-            this.lalbUserName.TabIndex = 1;
-            this.lalbUserName.Text = "Tên nhân viên";
-            this.lalbUserName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbCashierName.AutoSize = true;
+            this.lbCashierName.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCashierName.Location = new System.Drawing.Point(60, 157);
+            this.lbCashierName.Name = "lbCashierName";
+            this.lbCashierName.Size = new System.Drawing.Size(151, 29);
+            this.lbCashierName.TabIndex = 1;
+            this.lbCashierName.Text = "Tên nhân viên";
+            this.lbCashierName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2CirclePictureBox1
             // 
@@ -437,7 +439,7 @@
             this.guna2CirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.Image")));
             this.guna2CirclePictureBox1.ImageRotate = 0F;
             this.guna2CirclePictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("guna2CirclePictureBox1.InitialImage")));
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(90, 32);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(89, 40);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.Size = new System.Drawing.Size(92, 90);
@@ -502,9 +504,8 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         private Guna.UI2.WinForms.Guna2Button btnDashBoard;
         private Guna.UI2.WinForms.Guna2Button btnLogOut;
-        private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Guna.UI2.WinForms.Guna2Button btnCash;
         private Guna.UI2.WinForms.Guna2Button btnStore;
-        private Guna.UI2.WinForms.Guna2Button btnUser;
         private Guna.UI2.WinForms.Guna2Button btnCustomers;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private System.Windows.Forms.Label label1;
@@ -517,8 +518,9 @@
         private Guna.UI2.WinForms.Guna2Button btnFullScreen;
         private Guna.UI2.WinForms.Guna2Button btnExit;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel4;
-        private System.Windows.Forms.Label lbRole;
-        private System.Windows.Forms.Label lalbUserName;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        public System.Windows.Forms.Label lbCashierName;
+        public System.Windows.Forms.Label lbRole;
+        public Guna.UI2.WinForms.Guna2Button btnUser;
     }
 }

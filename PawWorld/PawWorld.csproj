@@ -105,6 +105,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="dbConnect.cs" />
+    <Compile Include="Forms\Forms\CashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Forms\CashForm.Designer.cs">
+      <DependentUpon>CashForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Forms\CashProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Forms\CashProductForm.Designer.cs">
+      <DependentUpon>CashProductForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Forms\CustomerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +178,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Forms\CashForm.resx">
+      <DependentUpon>CashForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Forms\CashProductForm.resx">
+      <DependentUpon>CashProductForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Forms\CustomerForm.resx">
       <DependentUpon>CustomerForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -251,6 +269,8 @@
     <Content Include="Resources\Icon\Logout.png" />
     <Content Include="Resources\Icon\min-max-windows.png" />
     <Content Include="Resources\Icon\normal-screen.png" />
+    <Content Include="Resources\Icon\plus.png" />
+    <Content Include="Resources\Icon\subtract.png" />
     <Content Include="Resources\Illustrations\paw.png" />
     <Content Include="Resources\Icon\pet-care.png" />
     <Content Include="Resources\Icon\plus.jpg" />

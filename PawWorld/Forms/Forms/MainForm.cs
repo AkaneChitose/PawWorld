@@ -1,4 +1,5 @@
 ﻿using PawWorld.Forms;
+using PawWorld.Forms.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -88,7 +89,14 @@ namespace PawWorld
 
         private void btnLogOut_Click(object sender, EventArgs e)
         {
+            this.Dispose();
+            LoginForm login = new LoginForm();
+            login.ShowDialog();
+        }
 
+        private void btnCash_Click(object sender, EventArgs e)
+        {
+            openChildForm(new CashForm(this));
         }
     }
 }

@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PawWorld.Forms
@@ -41,7 +34,7 @@ namespace PawWorld.Forms
 
         private void tbSearch_TextChanged(object sender, EventArgs e)
         {
-
+            LoadProduct();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -50,7 +43,7 @@ namespace PawWorld.Forms
             module.ShowDialog();
         }
 
-        private void dgvProductInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public void dgvProductInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string colName = dgvProductInfo.Columns[e.ColumnIndex].Name;
             if (colName == "Edit")
@@ -67,7 +60,7 @@ namespace PawWorld.Forms
                 module.btnUpdate.Enabled = true;
                 module.ShowDialog();
             }
-            else if (colName == "Delete") 
+            else if (colName == "Delete")
             {
                 if (MessageBox.Show("Bạn có chắc chắn muốn xóa sản phẩm này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
