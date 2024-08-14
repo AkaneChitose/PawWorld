@@ -67,7 +67,7 @@
             this.btnExit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnExit.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(539, 12);
+            this.btnExit.Location = new System.Drawing.Point(524, 12);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(50, 30);
             this.btnExit.TabIndex = 33;
@@ -83,7 +83,7 @@
             this.dtpDoB.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(232)))), ((int)(((byte)(220)))));
             this.dtpDoB.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             this.dtpDoB.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpDoB.Location = new System.Drawing.Point(191, 478);
+            this.dtpDoB.Location = new System.Drawing.Point(184, 478);
             this.dtpDoB.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpDoB.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpDoB.Name = "dtpDoB";
@@ -95,7 +95,7 @@
             // 
             this.lbUID.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbUID.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUID.Location = new System.Drawing.Point(93, 162);
+            this.lbUID.Location = new System.Drawing.Point(86, 162);
             this.lbUID.Name = "lbUID";
             this.lbUID.Size = new System.Drawing.Size(71, 39);
             this.lbUID.TabIndex = 50;
@@ -115,7 +115,7 @@
             this.btnUpdate.Enabled = false;
             this.btnUpdate.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.Color.White;
-            this.btnUpdate.Location = new System.Drawing.Point(316, 647);
+            this.btnUpdate.Location = new System.Drawing.Point(181, 656);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(198, 58);
             this.btnUpdate.TabIndex = 42;
@@ -134,9 +134,9 @@
             this.btnSave.FillColor = System.Drawing.Color.ForestGreen;
             this.btnSave.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(90, 647);
+            this.btnSave.Location = new System.Drawing.Point(181, 656);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(198, 58);
+            this.btnSave.Size = new System.Drawing.Size(201, 58);
             this.btnSave.TabIndex = 41;
             this.btnSave.Text = "Xác nhận";
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
@@ -160,7 +160,7 @@
             "Quản lí",
             "Thu ngân",
             "Tạp vụ"});
-            this.cbRole.Location = new System.Drawing.Point(191, 545);
+            this.cbRole.Location = new System.Drawing.Point(184, 545);
             this.cbRole.Name = "cbRole";
             this.cbRole.Size = new System.Drawing.Size(117, 44);
             this.cbRole.StartIndex = 0;
@@ -183,7 +183,7 @@
             this.tbPassword.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbPassword.ForeColor = System.Drawing.Color.Black;
             this.tbPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPassword.Location = new System.Drawing.Point(183, 343);
+            this.tbPassword.Location = new System.Drawing.Point(176, 343);
             this.tbPassword.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '●';
@@ -210,7 +210,7 @@
             this.tbPhoneNumber.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbPhoneNumber.ForeColor = System.Drawing.Color.Black;
             this.tbPhoneNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbPhoneNumber.Location = new System.Drawing.Point(188, 410);
+            this.tbPhoneNumber.Location = new System.Drawing.Point(181, 410);
             this.tbPhoneNumber.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.tbPhoneNumber.Name = "tbPhoneNumber";
             this.tbPhoneNumber.PasswordChar = '\0';
@@ -236,7 +236,7 @@
             this.tbAddress.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tbAddress.ForeColor = System.Drawing.Color.Black;
             this.tbAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbAddress.Location = new System.Drawing.Point(183, 274);
+            this.tbAddress.Location = new System.Drawing.Point(176, 274);
             this.tbAddress.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.tbAddress.Name = "tbAddress";
             this.tbAddress.PasswordChar = '\0';
@@ -262,7 +262,7 @@
             this.tbName.Font = new System.Drawing.Font("Calibri", 12F);
             this.tbName.ForeColor = System.Drawing.Color.Black;
             this.tbName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.tbName.Location = new System.Drawing.Point(188, 201);
+            this.tbName.Location = new System.Drawing.Point(181, 201);
             this.tbName.Margin = new System.Windows.Forms.Padding(10, 3, 3, 3);
             this.tbName.Name = "tbName";
             this.tbName.PasswordChar = '\0';
@@ -276,7 +276,7 @@
             // 
             this.lbPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbPassword.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPassword.Location = new System.Drawing.Point(34, 343);
+            this.lbPassword.Location = new System.Drawing.Point(27, 343);
             this.lbPassword.Name = "lbPassword";
             this.lbPassword.Size = new System.Drawing.Size(126, 45);
             this.lbPassword.TabIndex = 44;
@@ -287,7 +287,7 @@
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(30, 478);
+            this.label6.Location = new System.Drawing.Point(23, 478);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(130, 45);
             this.label6.TabIndex = 45;
@@ -298,7 +298,7 @@
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(59, 544);
+            this.label5.Location = new System.Drawing.Point(52, 544);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 45);
             this.label5.TabIndex = 46;
@@ -309,7 +309,7 @@
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(7, 410);
+            this.label4.Location = new System.Drawing.Point(0, 410);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(157, 45);
             this.label4.TabIndex = 47;
@@ -320,7 +320,7 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(63, 274);
+            this.label3.Location = new System.Drawing.Point(56, 274);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(101, 45);
             this.label3.TabIndex = 48;
@@ -331,7 +331,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(63, 201);
+            this.label2.Location = new System.Drawing.Point(56, 201);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(101, 45);
             this.label2.TabIndex = 49;
@@ -365,9 +365,9 @@
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.guna2Panel1.Location = new System.Drawing.Point(605, 0);
+            this.guna2Panel1.Location = new System.Drawing.Point(590, 0);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(10, 747);
+            this.guna2Panel1.Size = new System.Drawing.Size(10, 750);
             this.guna2Panel1.TabIndex = 52;
             // 
             // UserModule
@@ -376,11 +376,10 @@
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(615, 747);
+            this.ClientSize = new System.Drawing.Size(600, 750);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.dtpDoB);
             this.Controls.Add(this.lbUID);
-            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.cbRole);
             this.Controls.Add(this.tbPassword);
@@ -396,6 +395,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lv2);
             this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnUpdate);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Calibri", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

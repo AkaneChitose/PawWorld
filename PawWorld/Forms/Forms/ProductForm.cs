@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PawWorld.Forms
@@ -36,27 +29,12 @@ namespace PawWorld.Forms
 
         private void btnFullScreen_Click(object sender, EventArgs e)
         {
-            if (isFullScreen)
-            {
-                // Change to minimized state
-                this.WindowState = FormWindowState.Minimized;
-                //btnFullScreen.Text = "Full Screen"; // Optional: Change button text
-            }
-            else
-            {
-                // Change to full screen state
-                this.WindowState = FormWindowState.Normal;
-                this.FormBorderStyle = FormBorderStyle.None;
-                this.WindowState = FormWindowState.Maximized;
-                //btnFullScreen.Text = "Minimize"; // Optional: Change button text
-            }
 
-            isFullScreen = !isFullScreen;
         }
 
         private void tbSearch_TextChanged(object sender, EventArgs e)
         {
-
+            LoadProduct();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -65,7 +43,7 @@ namespace PawWorld.Forms
             module.ShowDialog();
         }
 
-        private void dgvProductInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        public void dgvProductInfo_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             string colName = dgvProductInfo.Columns[e.ColumnIndex].Name;
             if (colName == "Edit")
@@ -78,17 +56,16 @@ namespace PawWorld.Forms
                 module.tbPrice.Text = dgvProductInfo.Rows[e.RowIndex].Cells[6].Value.ToString();
                 module.nudQty.Text = dgvProductInfo.Rows[e.RowIndex].Cells[5].Value.ToString();
 
-                btnAdd.Enabled = false;
+                module.btnSave.Visible = false;
                 module.btnUpdate.Enabled = true;
                 module.ShowDialog();
             }
-            else if (colName == "Delete") 
+            else if (colName == "Delete")
             {
                 if (MessageBox.Show("Bạn có chắc chắn muốn xóa sản phẩm này không?", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     try
                     {
-                        // Using a parameterized query to prevent SQL injection
                         using (SqlCommand cm = new SqlCommand("DELETE FROM tbProduct WHERE pcode = @pcode", cn))
                         {
                             cm.Parameters.AddWithValue("@pcode", dgvProductInfo.Rows[e.RowIndex].Cells[1].Value.ToString());
@@ -97,7 +74,6 @@ namespace PawWorld.Forms
                             int rowsAffected = cm.ExecuteNonQuery();
                             cn.Close();
 
-                            // Check if any row was actually deleted
                             if (rowsAffected > 0)
                             {
                                 MessageBox.Show("Xóa sản phẩm thành công!", title, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -114,11 +90,9 @@ namespace PawWorld.Forms
                         cn.Close();
                     }
                 }
-
             }
             LoadProduct();
         }
-
 
 
 

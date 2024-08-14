@@ -141,9 +141,9 @@
             this.cbCategory.ForeColor = System.Drawing.Color.DimGray;
             this.cbCategory.ItemHeight = 38;
             this.cbCategory.Items.AddRange(new object[] {
-            "Chó",
-            "Mèo",
-            "Chim",
+            "Dog",
+            "Cat",
+            "Bird",
             "Hamster"});
             this.cbCategory.Location = new System.Drawing.Point(751, 189);
             this.cbCategory.Name = "cbCategory";
@@ -361,20 +361,20 @@
             // btnSave
             // 
             this.btnSave.AutoRoundedCorners = true;
-            this.btnSave.BorderRadius = 21;
+            this.btnSave.BorderRadius = 25;
             this.btnSave.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.btnSave.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSave.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSave.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSave.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnSave.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnSave.Font = new System.Drawing.Font("Calibri", 11.25F);
+            this.btnSave.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Bold);
             this.btnSave.ForeColor = System.Drawing.Color.White;
             this.btnSave.Location = new System.Drawing.Point(368, 408);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(145, 45);
+            this.btnSave.Size = new System.Drawing.Size(168, 52);
             this.btnSave.TabIndex = 37;
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "Xác nhận";
             this.btnSave.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // ProductModule
@@ -434,6 +434,6 @@
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
         public Guna.UI2.WinForms.Guna2NumericUpDown nudQty;
-        private Guna.UI2.WinForms.Guna2Button btnSave;
+        public Guna.UI2.WinForms.Guna2Button btnSave;
     }
 }

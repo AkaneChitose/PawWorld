@@ -1,8 +1,10 @@
 ﻿using PawWorld.Forms;
+using PawWorld.Forms.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -11,11 +13,19 @@ using System.Windows.Forms;
 
 namespace PawWorld
 {
-    public partial class FormMain : Form
+    public partial class MainForm : Form
     {
-        public FormMain()
+        SqlConnection cn = new SqlConnection();
+        SqlCommand cm = new SqlCommand();
+        dbConnect dbcon = new dbConnect();
+        SqlDataReader dr;
+
+        string title = "Paw World 🐾";
+        public MainForm()
         {
             InitializeComponent();
+            cn = new SqlConnection(dbcon.connection());
+            loadDailySale(this);
         }
 
         private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
@@ -51,7 +61,7 @@ namespace PawWorld
             //lbTitle.Text = "CỬA HÀNG";
         }
 
-        #region
+        #region func
         private Form activeForm = null;
         public void openChildForm(Form childForm)
         {
@@ -68,7 +78,28 @@ namespace PawWorld
             pnChild.Tag= childForm;
             childForm.Show();
         }
-        #endregion
+        public void loadDailySale(Form childForm)
+        {
+            string sdate = DateTime.Now.ToString("ddMMyyyy");
+
+            try
+            {
+                cn.Open();
+                cm = new SqlCommand("SELECT ISNULL(SUM(total), 0) AS total FROM tbCash WHERE transno LIKE '" +sdate + "%'", cn);
+                cm.Parameters.AddWithValue("@price", sdate);
+                lbTotalRecord.Text = double.Parse(cm.ExecuteReader().ToString()).ToString("#,##0.00");
+                
+                cn.Close();
+            }
+            catch (Exception ex)
+            {
+                cn.Close();
+                MessageBox.Show(ex.Message, title);
+            }
+            //return data;
+        }
+        
+        #endregion func
 
         private void pnChild_Paint(object sender, PaintEventArgs e)
         {
@@ -78,6 +109,28 @@ namespace PawWorld
         private void btnUser_Click(object sender, EventArgs e)
         {
             openChildForm(new UserForm());
+        }
+
+        private void btnCustomers_Click(object sender, EventArgs e)
+        {
+            openChildForm(new CustomerForm());
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+            LoginForm login = new LoginForm();
+            login.ShowDialog();
+        }
+
+        private void btnCash_Click(object sender, EventArgs e)
+        {
+            openChildForm(new CashForm(this));
+        }
+
+        private void btnDashBoard_Click(object sender, EventArgs e)
+        {
+            openChildForm(new DashBoard());
         }
     }
 }

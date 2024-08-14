@@ -30,7 +30,7 @@ namespace PawWorld
             if (progressBar.Value == 100)
             {
                 timer.Enabled = false;
-                FormMain form = new FormMain();
+                MainForm form = new MainForm();
                 form.Show();
                 this.Hide();
             }
